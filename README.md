@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Fit 60
 
-## Getting Started
+Sixty days to build it. A lifetime to live it.
 
-First, run the development server:
+A 60-day guide and lifelong tool for training, eating, sleeping, and living well. No accounts, no ads, no upsells. Evidence-backed where it matters; opinion labeled where it doesn't.
+
+## Stack
+
+- Next.js (App Router) + React + TypeScript
+- Tailwind CSS
+- localStorage for calculator, split, and diet preferences
+
+## Run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Phase 1 (Days 1–28):** Build
+- **Phase 2 (Days 29–56):** Grow
+- **Finish (Days 57–60):** Look back, then forward
+- **Day 61+:** Yours now
 
-## Learn More
+## Customize
 
-To learn more about Next.js, take a look at the following resources:
+All content lives in `src/data/`. Calculator logic in `src/lib/calories.ts`. Meal portion solver in `src/lib/mealBuilder.ts`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Build checklist notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Calculator matches calculator.net’s three formulas, six multipliers (1.2 / 1.375 / 1.465 / 1.55 / 1.725 / 1.95), five goal tiers, and 1,200 / 1,500 kcal floors
+- Meal builder targets ±3% of calorie target across goal tiers for test users at 130 lb, 182 lb, and 240 lb
+- Sticky in-page nav works on all long pages (Lift, Diet, Run, Sleep, Life)
+- Splits render as tabs with persisted selection (`fit60:splitId`)
+- Every long page has intro copy, a three-things callout, section transitions, and exactly one pull quote
+- Tip groups collapse beyond 6 per group; no TIP index numbers
+- Voice pass applied — copy reads conversational, not spec-like
+- `prefers-reduced-motion` disables section reveal animations
+- Nav order: Home / Lift / Diet / Run / Sleep / Life / Supplements / Calendar
+- `/sleep` and updated `/references` (Sleep group) are in the sitemap
