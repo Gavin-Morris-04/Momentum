@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:pages": "GITHUB_PAGES=true next build",
+    "preview:pages": "npm run build:pages && npx --yes serve out -l 3000",
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run"

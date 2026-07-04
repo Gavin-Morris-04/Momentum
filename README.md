@@ -10,7 +10,7 @@ A 60-day guide and lifelong tool for training, eating, sleeping, and living well
 - Tailwind CSS
 - localStorage for calculator, split, and diet preferences
 
-## Run
+## Run locally
 
 ```bash
 npm install
@@ -18,6 +18,22 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
+
+## Publish to GitHub Pages
+
+This repo deploys automatically when you push to `main`. You also need to turn on Pages in the repo settings:
+
+1. On GitHub, open **Settings → Pages**
+2. Under **Build and deployment**, set **Source** to **GitHub Actions** (not “Deploy from a branch”)
+3. Push to `main` — the **Deploy to GitHub Pages** workflow builds the site and publishes it
+
+The live site will be at **https://gavin-morris-04.github.io/Momentum/** (project Pages URL for this repo name).
+
+To test the production build locally (visit **http://localhost:3000/Momentum/** — note the `/Momentum/` path):
+
+```bash
+npm run preview:pages
+```
 
 ## Structure
 
